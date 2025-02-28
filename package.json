@@ -1,0 +1,25 @@
+{
+  "name": "vit-mode-fed",
+  "version": "1.0.0",
+  "scripts": {
+    "dev_components": "cd remote_components && yarn dev",
+    "build_components": "cd remote_components && yarn build",
+    "preview_components": "cd remote_components && yarn preview",
+    "dev_store": "cd remote_store && yarn dev",
+    "build_store": "cd remote_store && yarn build",
+    "preview_store": "cd remote_store && yarn preview",
+    "dev": "concurrently --kill-others-on-fail \"yarn dev_store\" \"yarn dev_components\"",
+    "build": "concurrently --kill-others-on-fail \"yarn build_store\" \"yarn build_components\"",
+    "preview": "concurrently --kill-others-on-fail \"yarn preview_store\" \"yarn preview_components\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "workspaces": [
+    "remote_store",
+    "remote_components"
+  ],
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
