@@ -5,19 +5,23 @@
     "dev_components": "cd remote_components && yarn dev",
     "build_components": "cd remote_components && yarn build",
     "preview_components": "cd remote_components && yarn preview",
+    "dev_components2": "cd remote_components2 && yarn dev",
+    "build_components2": "cd remote_components2 && yarn build",
+    "preview_components2": "cd remote_components2 && yarn preview",
     "dev_store": "cd remote_store && yarn dev",
     "build_store": "cd remote_store && yarn build",
     "preview_store": "cd remote_store && yarn preview",
-    "dev": "concurrently --kill-others-on-fail \"yarn dev_store\" \"yarn dev_components\"",
-    "build": "concurrently --kill-others-on-fail \"yarn build_store\" \"yarn build_components\"",
-    "preview": "concurrently --kill-others-on-fail \"yarn preview_store\" \"yarn preview_components\""
+    "dev": "concurrently --kill-others-on-fail \"yarn dev_store\" \"yarn dev_components\" \"yarn dev_components2\"",
+    "build": "concurrently --kill-others-on-fail \"yarn build_store\" \"yarn build_components\" \"yarn build_components2\"",
+    "preview": "concurrently --kill-others-on-fail \"yarn preview_store\" \"yarn preview_components\" \"yarn preview_components2\""
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "workspaces": [
     "remote_store",
-    "remote_components"
+    "remote_components",
+    "remote_components2"
   ],
   "dependencies": {
     "concurrently": "^9.1.2"

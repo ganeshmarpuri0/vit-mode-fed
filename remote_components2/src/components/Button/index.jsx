@@ -1,7 +1,7 @@
 import React from 'react'
 import useStore from 'store/store'
 
-function Button1() {
+function Button2() {
   const access_token = useStore((state) => state.access_token)
   const setAccessToken = useStore((state) => state.setAccessToken);
   const count = useStore((state) => state.count)
@@ -16,6 +16,7 @@ function Button1() {
     <>
       <div className="card">
         <span>Button1 from remote_components</span>
+
         <button onClick={() => increment()}>
           count is {count}
         </button>
@@ -37,4 +38,4 @@ function Button1() {
   )
 }
 
-export default Button1
+export default Button2

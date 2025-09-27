@@ -18,7 +18,7 @@ export default defineConfig({
         },
       },
       exposes: {
-        './Button1': './src/components/Button',
+        './Button2': './src/components/Button',
       },
       shared: {
         react: {
@@ -31,10 +31,10 @@ export default defineConfig({
     })
   ],
   server: {
-    port: 3001
+    port: 3003
   },
   preview: {
-    port: 3001
+    port: 3003
   },
   build: {
     target: 'esnext'

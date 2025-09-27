@@ -10,6 +10,16 @@ export default defineConfig({
       name: 'store',
       filename: 'remoteEntry.js',
       remotes: {
+        Button1: {
+          type: "module",
+          name: "Button1",
+          entry: "http://localhost:3001/remoteEntry.js",
+        },
+        Button2: {
+          type: "module",
+          name: "Button2",
+          entry: "http://localhost:3003/remoteEntry.js",
+        },
       },
       exposes: {
         './store': './src/statemangement/store',
