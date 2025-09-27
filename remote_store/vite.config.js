@@ -43,4 +43,7 @@ export default defineConfig({
   build: {
     target: 'esnext'
   },
+  experimental: {
+    renderBuiltUrl: filename => '../../' + filename
+  },
 })

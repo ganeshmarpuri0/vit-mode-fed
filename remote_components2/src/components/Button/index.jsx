@@ -15,7 +15,7 @@ function Button2() {
   return (
     <>
       <div className="card">
-        <span>Button1 from remote_components</span>
+        <span>Button2 from remote_components</span>
 
         <button onClick={() => increment()}>
           count is {count}
